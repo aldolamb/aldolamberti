@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+
+h1 { text-align: center; letter-spacing: 5px; }
+
+a { color: black; padding: 1em;}
+
+.home {
+    margin: 0 10vw;
+}
+
+Header p {
+    letter-spacing: 5px;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.Tilt2 {
+    width: 60vw;
+    margin: 20vh 10vw;
+    height: 20vh;
+    line-height: 20vh;
+    z-index: 0;
+    background: black;
+    color: white;
+}
+.Tilt2 * {
+    margin: 0;
+}
+.bio {
+    font-size: 1.1em;
+    text-align: center;
+}
+    .bio p {
+        display: inline-block;
+        margin: 0;
+    }
+
+.work, .personal {
+    padding-top: 7em;
+    width: 100%;
+    text-align: center;
+}
+    .experience {
+        width: 31%;
+        padding: 0 1%;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .experience .details {
+        text-align: left;
+    }
+
+.contact {
+    text-align: center;
+    /*height: 16em;*/
+    padding: 7em 0;
+    /*line-height: 16em;*/
+    width: 100%;
+    overflow: hidden;
+}
+
+@media (max-width: 750px) {
+    .experience {
+        width: 100%;
+        padding: 0;
+    }
+}
