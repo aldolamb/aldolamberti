@@ -53,11 +53,20 @@ Header p {
         text-align: left;
     }
 
+.personal p {
+    font-size: 1.3em;
+    padding: 5vw 1%;
+    margin: 0;
+    width: 48%;
+    display: inline-block;
+}
+.personal a {
+    text-decoration: none;
+}
+
 .contact {
     text-align: center;
-    /*height: 16em;*/
     padding: 7em 0;
-    /*line-height: 16em;*/
     width: 100%;
     overflow: hidden;
 }
