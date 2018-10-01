@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: Verdana, Geneva, sans-serif;
     /*font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;*/
+    /*background-color: black;*/
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -36,6 +37,8 @@ pre {
     text-align: center;
     -webkit-animation: blinking 1s linear infinite;
     font-size: 2em;
+    position: absolute;
+    width: 100%;
 }
 
 /*.home:hover {*/
@@ -51,6 +54,8 @@ pre {
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
+    overflow: hidden;
+    /*perspective: 50em;*/
 }
 
 .front {
@@ -85,6 +90,7 @@ pre {
     margin-block-start: 0;
     margin-block-end: 0;
     background: white;
+    /*background: #C0C0C0;*/
 }
 
 .front .bottom {
@@ -113,6 +119,7 @@ a { color: inherit; line-height: 25px; padding: 10px;}
     box-sizing: border-box;
     padding: 15px;
     background: black;
+    /*background: #141414;*/
     color: white;
 }
 
@@ -121,4 +128,26 @@ a { color: inherit; line-height: 25px; padding: 10px;}
     position: absolute;
     bottom: 15px;
     right: 15px;
+}
+
+.front .shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+    /*transition: .5s;*/
+    opacity: .6;
+}
+
+.back .shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+    opacity: .15;
+    /*transition: .5s;*/
 }

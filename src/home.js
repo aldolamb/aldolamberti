@@ -63,6 +63,20 @@ export class Home extends Component {
             document.getElementById("back").style.webkitTransform = `rotateY(${newRotateX + 180}deg) rotateX(${-newRotateY}deg)`;
             document.getElementById("back").style.transform = `rotateY(${newRotateX + 180}deg) rotateX(${-newRotateY}deg)`;
 
+            // console.log(newRotateX, newRotateX%180, (newRotateX%180)-45, ((newRotateX%180)-45)/45, (((newRotateX%180)-45)/45)*330);
+            // console.log(newRotateX, (((newRotateX%180)-45)/45)*330);
+            // if (newRotateX > 0) {
+            //     document.getElementById("shineFront").style.left = -((((newRotateX % 180) - 45) / 45) * 330) + "px";
+            //     document.getElementById("shineBack").style.left = ((((newRotateX % 180) - 45) / 45) * 330) + "px";
+            //     // document.getElementById("shineFront").style.left = ((((newRotateY % 180) - 45) / 45) * 200) + "px";
+            //     // document.getElementById("shineBack").style.left = -((((newRotateY % 180) - 45) / 45) * 200) + "px";
+            // } else {
+            //     document.getElementById("shineFront").style.left = -((((newRotateX % 180) + 45) / 45) * 330) + "px";
+            //     document.getElementById("shineBack").style.left = ((((newRotateX % 180) + 45) / 45) * 330) + "px";
+            //     // document.getElementById("shineFront").style.left = ((((newRotateY % 180) + 45) / 45) * 200) + "px";
+            //     // document.getElementById("shineBack").style.left = -((((newRotateY % 180) + 45) / 45) * 200) + "px";
+            // }
+
             // console.log(Math.abs(newRotateX%360), Math.abs(newRotateY%360), Math.abs(newRotateX%360/90), Math.abs(newRotateY%360/90))
             // if ((Math.abs(newRotateX%360/90) > 1 && Math.abs(newRotateX%360/90) < 3) ^ (Math.abs(newRotateY%360/90) > 1 && Math.abs(newRotateY%360/90) < 3)) {
             //     document.getElementById("front").style.zIndex = 1;
@@ -94,7 +108,7 @@ export class Home extends Component {
 
     render() {
         return (
-            <div style={{width: "100vw", height: "100vh"}}
+            <div style={{width: "100vw", height: "100vh", perspective: "50em"}}
                  onMouseDown={(e) => this.handleMouseDown(e, 0)} onMouseMove={(e) => this.handleMouseMove(e, 0)} onMouseUp={(e) => this.handleMouseUp(e, 0)}
                  onTouchStart={(e) => this.handleMouseDown(e, 1)} onTouchMove={(e) => this.handleMouseMove(e, 1)} onTouchEnd={(e) => this.handleMouseUp(e, 1)}>
                 <pre id="directions">DRAG OR SWIPE</pre>
@@ -105,16 +119,18 @@ export class Home extends Component {
                     </div>
                     <h1 className="name">ALDO</h1>
                     <div className="bottom"/>
+                    {/*<div id="shineFront" className="shine"/>*/}
                 </div>
                 <div id="back" className="back">
                     <h2>Work</h2>
                     <a href="https://weakmindedmasses.com">Weak Minded Masses</a><br/>
-                    <a href="https://parkerschmidt-cd115.firebaseapp.com">Parker Schmidt</a><br/>
+                    <a href="https://parkerschmidt.co">Parker Schmidt</a><br/>
                     <br/>
                     <div className="bottom">
                         <a href="https://github.com/jlamberti">Github</a>
                         <a href="mailto:jlamberti2015@gmail.com">Contact</a>
                     </div>
+                    {/*<div id="shineBack" className="shine"/>*/}
                     {/*<div className="top">*/}
                         {/*<h1>HELLO</h1>*/}
                         {/*<h4>my name is</h4>*/}
