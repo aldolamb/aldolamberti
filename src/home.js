@@ -36,6 +36,7 @@ export class Home extends Component {
                 downX: event.pageX,
                 downY: event.pageY
             });
+            document.getElementById("dragFrame").style.cursor = "grabbing"
         }
     };
 
@@ -99,6 +100,7 @@ export class Home extends Component {
         } else {
             newRotateX = state.rotateX + state.downX - event.pageX;
             newRotateY = state.rotateY + state.downY - event.pageY;
+            document.getElementById("dragFrame").style.cursor = "grab"
         }
         this.setState({
             rotateX: newRotateX,
@@ -108,14 +110,14 @@ export class Home extends Component {
 
     render() {
         return (
-            <div style={{width: "100vw", height: "100vh", perspective: "50em"}}
+            <div style={{width: "100vw", height: "100vh", perspective: "50em"}} id="dragFrame"
                  onMouseDown={(e) => this.handleMouseDown(e, 0)} onMouseMove={(e) => this.handleMouseMove(e, 0)} onMouseUp={(e) => this.handleMouseUp(e, 0)}
                  onTouchStart={(e) => this.handleMouseDown(e, 1)} onTouchMove={(e) => this.handleMouseMove(e, 1)} onTouchEnd={(e) => this.handleMouseUp(e, 1)}>
                 <pre id="directions">DRAG OR SWIPE</pre>
                 <div id="front" className="front">
                     <div className="top">
                         <h1>HELLO</h1>
-                        <h4>my name is</h4>
+                        <p>my name is</p>
                     </div>
                     <h1 className="name">ALDO</h1>
                     <div className="bottom"/>
