@@ -23,20 +23,15 @@ const links = [
     'http://toosoon.paris/'
 ];
 
-function _handleClick(link) {
-    document.getElementById("preview").src = link;
-}
-
 export class iLike extends React.Component {
     render () {
         return (
             <div className="iLike">
                 <ul>
                 {links.map(link => {
-                    return <li key={link}><p onClick={() => _handleClick(link)}>{link}</p><a href={link} target="_blank">open</a></li>})
+                    return <li key={link}><a href={link} target="_blank">{link}</a></li>})
                 }
                 </ul>
-                <iframe id="preview" src="https://www.fantasticman.com/" frameBorder={0}/>
             </div>
         );
     }
