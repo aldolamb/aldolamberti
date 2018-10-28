@@ -153,4 +153,24 @@ pre {
   opacity: 0.15;
 }
 
+.iLike {
+  width: 100%;
+  height: 100%;
+  cursor: default;
+}
+.iLike ul li {
+  cursor: pointer;
+  margin-bottom: 0.5em;
+}
+.iLike ul li * {
+  display: inline;
+}
+.iLike iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 66vw;
+  height: 100vh;
+}
+
 /*# sourceMappingURL=index.css.map */

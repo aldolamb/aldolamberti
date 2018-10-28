@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import Tilt from "react-tilt";
 let lastScrollY = 0;
 let down = false;
 
