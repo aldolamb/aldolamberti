@@ -35,12 +35,20 @@ a { color: inherit; line-height: 25px; padding: 10px;}
     }
 }
 
-pre {
+
+#directions {
     text-align: center;
     -webkit-animation: blinking 1s linear infinite;
-    font-size: 2em;
+    font-size: 1.5em;
     position: absolute;
     width: 100%;
+    font-family: inherit;
+    &:before {
+        content:'\2190  '
+    }
+    &:after {
+        content:'  \2192'
+    }
 }
 
 .back, .front {

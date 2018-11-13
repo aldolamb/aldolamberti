@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   font-family: Verdana, Geneva, sans-serif;
@@ -37,12 +38,19 @@ a {
     opacity: 0;
   }
 }
-pre {
+#directions {
   text-align: center;
   -webkit-animation: blinking 1s linear infinite;
-  font-size: 2em;
+  font-size: 1.5em;
   position: absolute;
   width: 100%;
+  font-family: inherit;
+}
+#directions:before {
+  content: "← ";
+}
+#directions:after {
+  content: "  →";
 }
 
 .back, .front {

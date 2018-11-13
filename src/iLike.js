@@ -20,7 +20,9 @@ const links = [
     'https://sikkema.be/',
     'https://erik-joergensen.com/en/',
     'https://www.blimp.gr/',
-    'http://toosoon.paris/'
+    'http://toosoon.paris/',
+    'http://www.wongkeen.com/',
+    'http://dazzle.studio/'
 ];
 
 export class iLike extends React.Component {

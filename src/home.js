@@ -11,17 +11,29 @@ export class Home extends Component {
             rotateX: 0,
             rotateY: 0
         };
+        this.updateHeight = this.updateHeight.bind(this)
     }
 
-    componentDidMount() { window.addEventListener ('scroll', this.handleScroll); }
-    componentWillUnmount() { window.removeEventListener('scroll', this.handleScroll); }
+    componentDidMount() {
+        window.addEventListener ('scroll', this.handleScroll);
+        window.addEventListener("resize", this.updateHeight);
+        this.updateHeight();
+    }
+
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+        window.addEventListener("resize", this.updateHeight);
+    }
 
     handleScroll = () => {
         lastScrollY = window.scrollY;
-
-
-        console.log(lastScrollY);
     };
+
+    updateHeight() {
+        this.setState({ height: window.innerHeight });
+        console.log(window.innerHeight);
+    }
 
     handleMouseDown = (event, mobile) => {
         down = true;
@@ -108,8 +120,14 @@ export class Home extends Component {
     };
 
     render() {
+        let styleHeight = {
+            width: "100vw",
+            height: this.state.height + "px",
+            perspective: "50em"
+        };
+
         return (
-            <div style={{width: "100vw", height: "100vh", perspective: "50em"}} id="dragFrame"
+            <div style={styleHeight} id="dragFrame"
                  onMouseDown={(e) => this.handleMouseDown(e, 0)} onMouseMove={(e) => this.handleMouseMove(e, 0)} onMouseUp={(e) => this.handleMouseUp(e, 0)}
                  onTouchStart={(e) => this.handleMouseDown(e, 1)} onTouchMove={(e) => this.handleMouseMove(e, 1)} onTouchEnd={(e) => this.handleMouseUp(e, 1)}>
                 <pre id="directions">DRAG OR SWIPE</pre>
