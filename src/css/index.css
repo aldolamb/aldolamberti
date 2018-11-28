@@ -161,19 +161,19 @@ a {
   opacity: 0.15;
 }
 
-.iLike {
+.i-like {
   width: 100%;
   height: 100%;
   cursor: default;
 }
-.iLike ul li {
+.i-like ul li {
   cursor: pointer;
   margin-bottom: 0.5em;
 }
-.iLike ul li * {
+.i-like ul li * {
   display: inline;
 }
-.iLike iframe {
+.i-like iframe {
   position: absolute;
   top: 0;
   right: 0;

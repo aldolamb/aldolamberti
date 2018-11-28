@@ -28,7 +28,7 @@ const links = [
 export class iLike extends React.Component {
     render () {
         return (
-            <div className="iLike">
+            <div className="i-like">
                 <ul>
                 {links.map(link => {
                     return <li key={link}><a href={link} target="_blank">{link}</a></li>})
