@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-let lastScrollY = 0;
+// let lastScrollY = 0;
 let down = false;
 
 export class Home extends Component {
@@ -18,6 +18,7 @@ export class Home extends Component {
         window.addEventListener ('scroll', this.handleScroll);
         window.addEventListener("resize", this.updateHeight);
         this.updateHeight();
+        console.log('%cAldo Lamberti', 'text-align: center; padding: .5em 1em 1em .5em; font-weight: bold; font-size: 50px;color: #1a1a1a; text-shadow: 3px 3px 0 #333333, 6px 6px 0 #4d4d4d, 9px 9px 0 #666666, 12px 12px 0 #808080, 15px 15px 0 #999999, 18px 18px 0 #b3b3b3, 21px 21px 0 #cccccc, 24px 24px 0 #e6e6e6');
     }
 
 
@@ -26,13 +27,13 @@ export class Home extends Component {
         window.addEventListener("resize", this.updateHeight);
     }
 
-    handleScroll = () => {
-        lastScrollY = window.scrollY;
-    };
+    // handleScroll = () => {
+    //     lastScrollY = window.scrollY;
+    // };
 
     updateHeight() {
         this.setState({ height: window.innerHeight });
-        console.log(window.innerHeight);
+        // console.log(window.innerHeight);
     }
 
     handleMouseDown = (event, mobile) => {
