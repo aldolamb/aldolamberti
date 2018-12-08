@@ -56,7 +56,7 @@ export class Home extends Component {
         if (down) {
             let state = this.state;
             let difX, difY = 0;
-            console.log(mobile);
+            // console.log(mobile);
             if (mobile) {
                 difX = state.downX - event.changedTouches[0].pageX;
                 difY = state.downY - event.changedTouches[0].pageY;

@@ -22,7 +22,8 @@ const links = [
     'https://www.blimp.gr/',
     'http://toosoon.paris/',
     'http://www.wongkeen.com/',
-    'http://dazzle.studio/'
+    'http://dazzle.studio/',
+    'http://to.be/fields/G-SdMp'
 ];
 
 export class iLike extends React.Component {
