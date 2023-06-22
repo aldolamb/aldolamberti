@@ -1,16 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import './css/index.css';
-import { Home } from './home';
-import { iLike } from "./iLike";
-import registerServiceWorker from './registerServiceWorker';
+import ReactDOM from "react-dom";
+import { Main } from "./main";
+import "./css/index.css";
+import registerServiceWorker from "./registerServiceWorker";
 
-ReactDOM.render(
-    <Router>
-        <Switch>
-            <Route path='/ilike'    component={iLike} />
-            <Route path='/'         component={Home} />
-        </Switch>
-    </Router>, document.getElementById('root'));
+ReactDOM.render(<Main />, document.getElementById("root"));
 registerServiceWorker();
